@@ -31,10 +31,13 @@ class Redkiwi_Rkimages_Model_Image extends Mage_Catalog_Model_Product_Image
         }
         if (!$file) {
             // check if placeholder defined in config
-            $isConfigPlaceholder = Mage::getStoreConfig("catalog/placeholder/{$this->getDestinationSubdir()}_placeholder");
+            // $isConfigPlaceholder = Mage::getStoreConfig("catalog/placeholder/{$this->getDestinationSubdir()}_placeholder");
+            $isConfigPlaceholder = Mage::getStoreConfig("catalog/placeholder/image_placeholder");
             $configPlaceholder   = '/placeholder/' . $isConfigPlaceholder;
-            if ($isConfigPlaceholder && $this->_fileExists($baseDir . $configPlaceholder)) {
-                $file = $configPlaceholder;
+             if ($isConfigPlaceholder && $this->_fileExists(Mage::getBaseDir('media').DS.'catalog'.DS.'product'.$configPlaceholder )) {
+            //if ($isConfigPlaceholder && $this->_fileExists($baseDir . $configPlaceholder)) {
+                //$file = $configPlaceholder;
+                $file = DS.'media'.DS.'catalog'.DS.'product'.$configPlaceholder  ;
             }
             else {
                 // replace file with skin or default skin placeholder
