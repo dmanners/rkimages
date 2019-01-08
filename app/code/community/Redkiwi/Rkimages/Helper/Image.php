@@ -1,4 +1,9 @@
 <?php
+/**
+ * @license  	OSL-3.0
+ * @link       	https://github.com/dmanners/rkimages
+ * @author     	https://github.com/dmanners/rkimages/graphs/contributors
+ */
 
 class Redkiwi_Rkimages_Helper_image extends Mage_Catalog_Helper_Image 
 {

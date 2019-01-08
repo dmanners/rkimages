@@ -1,4 +1,9 @@
 <?php
+/**
+ * @license  	OSL-3.0
+ * @link       	https://github.com/dmanners/rkimages
+ * @author     	https://github.com/dmanners/rkimages/graphs/contributors
+ */
 
 class Redkiwi_Rkimages_Model_Image extends Mage_Catalog_Model_Product_Image
 {
@@ -8,6 +13,7 @@ class Redkiwi_Rkimages_Model_Image extends Mage_Catalog_Model_Product_Image
      *
      * @param string $file
      * @return Redkiwi_Rkimages_Model_Image
+     * @throws Exception
      */
     public function setBaseFile($file)
     {
